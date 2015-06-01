@@ -8,7 +8,17 @@ class Person
     public string Name
     {
         get { return this.name; }
-        set { this.name = value; }
+        set
+        {
+            if (value != null)
+            {
+                this.name = value;
+            }
+            else
+            {
+                throw new ArgumentException("This is not valid name");
+            }
+        }
     }
 
     public int Age
@@ -16,24 +26,44 @@ class Person
         get { return this.age; }
         set
         {
-            if (this.age >= 1 && this.age <= 100)
+            if (value >= 1 && value <= 100)
             {
                 this.age = value;
             }
             else
             {
-                throw new ArgumentException("Not valid age.");
+                throw new ArgumentException("This is not valid age.");
             }
         }
     }
 
+    public string Email {
+        get { return this.email; }
+        set
+        {
+            if (value == null)  //да го направя с regex за символ @
+            {
+                this.email = value;
+            }
+            
+        }
+    }
+    
+    public Person(string name, int age, string email) : this(name, age)
+    {
+        this.Name = name;
+        this.Age = age;
+        this.Email = email;
+    }
+
     public Person(string name, int age)
     {
-       
+        this.Name = name;
+        this.Age = age;
     }
 
     public override string ToString()
     {
-        return base.ToString();
+        return this.name;
     }
 }
