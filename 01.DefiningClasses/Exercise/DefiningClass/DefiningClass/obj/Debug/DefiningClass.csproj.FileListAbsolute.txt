@@ -1,0 +1,9 @@
+C:\Users\Ivaylo Ivanov\Documents\GitHub\CSharpExam31.05.15\DefiningClass\DefiningClass\bin\Debug\DefiningClass.exe.config
+C:\Users\Ivaylo Ivanov\Documents\GitHub\CSharpExam31.05.15\DefiningClass\DefiningClass\bin\Debug\DefiningClass.exe
+C:\Users\Ivaylo Ivanov\Documents\GitHub\CSharpExam31.05.15\DefiningClass\DefiningClass\bin\Debug\DefiningClass.pdb
+C:\Users\Ivaylo Ivanov\Documents\GitHub\CSharpExam31.05.15\DefiningClass\DefiningClass\obj\Debug\DefiningClass.csprojResolveAssemblyReference.cache
+C:\Users\Ivaylo Ivanov\Documents\GitHub\CSharpExam31.05.15\DefiningClass\DefiningClass\obj\Debug\DefiningClass.exe
+C:\Users\Ivaylo Ivanov\Documents\GitHub\CSharpExam31.05.15\DefiningClass\DefiningClass\obj\Debug\DefiningClass.pdb
+C:\Users\Ivaylo Ivanov\Documents\GitHub\OOP.CSharp\01.DefiningClasses\Exercise\DefiningClass\DefiningClass\bin\Debug\DefiningClass.exe.config
+C:\Users\Ivaylo Ivanov\Documents\GitHub\OOP.CSharp\01.DefiningClasses\Exercise\DefiningClass\DefiningClass\obj\Debug\DefiningClass.exe
+C:\Users\Ivaylo Ivanov\Documents\GitHub\OOP.CSharp\01.DefiningClasses\Exercise\DefiningClass\DefiningClass\obj\Debug\DefiningClass.pdb
