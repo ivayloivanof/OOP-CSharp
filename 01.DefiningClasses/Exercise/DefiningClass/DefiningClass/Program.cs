@@ -14,6 +14,8 @@ namespace DefiningClass
             unnamed.Bark();
             sharo.Bark();
 
+            DateTime date = new DateTime();
+
         }
     }
 }

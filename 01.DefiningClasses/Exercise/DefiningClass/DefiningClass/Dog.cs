@@ -11,9 +11,7 @@ namespace DefiningClass
         {
             
         }
-
-        //public Dog() : 
-
+        
         public Dog(string name, string breed)
         {
             this.Name = name;
@@ -22,7 +20,7 @@ namespace DefiningClass
 
         public void Bark()
         {
-            Console.WriteLine("{0} ({1}) said: Bauuuuuu!", this.Name ?? "[unnamed dog]", this.Breed ?? "[uncnow breed]");
+            Console.WriteLine("{0} ({1}) said: Bauuuuuu!", this.Name ?? "[unnamed dog]", this.Breed ?? "[unknown breed]");
         }
     }
 }
