@@ -43,32 +43,66 @@ class Laptop
     }
     public string Manufacturer {
         get { return this.manufacturer; }
-        set { this.manufacturer = value; }
+        set
+        {
+            if (value != null)
+            {
+                this.manufacturer = value;
+            }
+        }
     }
     public string Processor
     {
         get { return this.processor; }
-        set { this.processor = value; }
+        set
+        {
+            if (value != null)
+            {
+                this.processor = value;
+            }
+        }
     }
     public string Ram
     {
         get { return this.ram; }
-        set { this.ram = value; }
+        set
+        {
+            if (value != null)
+            {
+                this.ram = value;
+            }
+        }
     }
     public string GraphicsCard
     {
         get { return this.graphicsCard; }
-        set { this.graphicsCard = value; }
+        set
+        {
+            if (value != null)
+            {
+                this.graphicsCard = value;
+            }
+        }
     }
     public string HDD
     {
         get { return this.hdd; }
-        set { this.hdd = value; }
+        set
+        {
+            if (value != null)
+            {
+                this.hdd = value;
+            }
+        }
     }
     public string Screen
     {
         get { return this.screen; }
-        set { this.screen = value;
+        set {
+            if (value != null)
+            {
+                this.screen = value;
+            }
         }
     }
     
@@ -76,6 +110,7 @@ class Laptop
     {
         this.Model = model;
         this.Price = price;
+        PrintInfo();
     }
 
     public Laptop(  string model, double price, string manufacturer = null
@@ -92,6 +127,26 @@ class Laptop
         this.HDD = hdd;
         this.Screen = screen;
         BatteryInfo batteryInfo = new BatteryInfo(battery, baterryLife);
+        PrintInfo("full");
     }
 
+    private void PrintInfo(string information)
+    {
+        Console.WriteLine("model {0}", this.model);
+        Console.WriteLine("manufacturer {0}", this.manufacturer);
+        Console.WriteLine("processor {0}", this.processor);
+        Console.WriteLine("RAM {0}", this.ram);
+        Console.WriteLine("graphics card {0}", this.graphicsCard);
+        Console.WriteLine("HDD {0}", this.hdd);
+        Console.WriteLine("screen {0}", this.screen);
+        Console.WriteLine("battery {0}");
+        Console.WriteLine("battery life {0}");
+        Console.WriteLine("price {0:f2}lv", this.price);
+    }
+
+    private void PrintInfo()
+    {
+        Console.WriteLine("model {0}", this.model);
+        Console.WriteLine("price {0:f2}lv", this.price);
+    }
 }
