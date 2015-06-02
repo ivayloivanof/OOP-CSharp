@@ -106,11 +106,11 @@ class Laptop
         }
     }
     
+    
     public Laptop(string model, double price)
     {
         this.Model = model;
         this.Price = price;
-        PrintInfo();
     }
 
     public Laptop(  string model, double price, string manufacturer = null
@@ -126,27 +126,30 @@ class Laptop
         this.GraphicsCard = graphicsCard;
         this.HDD = hdd;
         this.Screen = screen;
-        BatteryInfo batteryInfo = new BatteryInfo(battery, baterryLife);
-        PrintInfo("full");
+        BatteryInfo.Battery = battery;
+        BatteryInfo.BatteryLife = baterryLife;
     }
 
-    private void PrintInfo(string information)
+    public override string ToString()
     {
-        Console.WriteLine("model {0}", this.model);
-        Console.WriteLine("manufacturer {0}", this.manufacturer);
-        Console.WriteLine("processor {0}", this.processor);
-        Console.WriteLine("RAM {0}", this.ram);
-        Console.WriteLine("graphics card {0}", this.graphicsCard);
-        Console.WriteLine("HDD {0}", this.hdd);
-        Console.WriteLine("screen {0}", this.screen);
-        Console.WriteLine("battery {0}");
-        Console.WriteLine("battery life {0}");
-        Console.WriteLine("price {0:f2}lv", this.price);
-    }
-
-    private void PrintInfo()
-    {
-        Console.WriteLine("model {0}", this.model);
-        Console.WriteLine("price {0:f2}lv", this.price);
+        if (this.manufacturer != null)
+        {
+            Console.WriteLine("model {0}", this.model);
+            Console.WriteLine("manufacturer {0}", this.manufacturer);
+            Console.WriteLine("processor {0}", this.processor);
+            Console.WriteLine("RAM {0}", this.ram);
+            Console.WriteLine("graphics card {0}", this.graphicsCard);
+            Console.WriteLine("HDD {0}", this.hdd);
+            Console.WriteLine("screen {0}", this.screen);
+            Console.WriteLine("battery {0}", BatteryInfo.Battery);
+            Console.WriteLine("battery life {0}", BatteryInfo.BatteryLife);
+            Console.WriteLine("price {0:f2}lv", this.price);
+        }
+        else
+        {
+            Console.WriteLine("model {0}", this.model);
+            Console.WriteLine("price {0:f2}lv", this.price);
+        }
+        return String.Empty;
     }
 }

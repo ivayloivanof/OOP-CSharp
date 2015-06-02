@@ -1,23 +1,17 @@
 ﻿using System;
-class BatteryInfo
+public static class BatteryInfo
 {
-    private string battery;
-    private string batteryLife;
+    private static string battery;
+    private static string batteryLife;
 
-    public string Battery
+    public static string Battery
     {
-        get { return this.battery; }
-        set { this.battery = value; }
+        get { return battery; }
+        set { battery = value; }
     }
-    public string BatteryLife
+    public static string BatteryLife
     {
         get { return batteryLife; }
-        set { this.batteryLife = value; }
-    }
-
-    public BatteryInfo(string baterry, string batteryLife)
-    {
-        this.Battery = battery;
-        this.BatteryLife = batteryLife;
+        set { batteryLife = value; }
     }
 }
