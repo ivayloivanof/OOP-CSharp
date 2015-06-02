@@ -43,20 +43,24 @@ class Person
         {
             if (value == null)  //да го направя с regex за символ @
             {
+                this.email = "[unknown email]";
+            }
+            if (value != null && value.Contains("@"))
+            {
                 this.email = value;
             }
             
         }
     }
     
-    public Person(string name, int age, string email) : this(name, age)
+    public Person(string name, int age, string email)
     {
         this.Name = name;
         this.Age = age;
         this.Email = email;
     }
 
-    public Person(string name, int age)
+    public Person(string name, int age) : this (name, age, email:null)
     {
         this.Name = name;
         this.Age = age;
