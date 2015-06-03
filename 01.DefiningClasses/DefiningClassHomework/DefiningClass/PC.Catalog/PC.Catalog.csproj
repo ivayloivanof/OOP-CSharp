@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Componnent.cs" />
-    <Compile Include="Computer.cs" />
+    <Compile Include="Computer\Component.cs" />
+    <Compile Include="Computer\Computer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
