@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SULS.Student.Current
 {
-    class OnsiteStudent
+    class OnsiteStudent : SULS.Student.Current
     {
     }
 }

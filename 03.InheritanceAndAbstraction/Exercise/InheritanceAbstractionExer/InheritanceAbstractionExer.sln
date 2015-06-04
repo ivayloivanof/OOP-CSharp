@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceAbstractionExer", "InheritanceAbstractionExer\InheritanceAbstractionExer.csproj", "{6F3131D2-D1B1-4A35-8813-B77F8356B408}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithAbstractions", "WorkingWithAbstractions\WorkingWithAbstractions.csproj", "{99201833-F3FD-4320-B919-8CA331FB6391}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6F3131D2-D1B1-4A35-8813-B77F8356B408}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F3131D2-D1B1-4A35-8813-B77F8356B408}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F3131D2-D1B1-4A35-8813-B77F8356B408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99201833-F3FD-4320-B919-8CA331FB6391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99201833-F3FD-4320-B919-8CA331FB6391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99201833-F3FD-4320-B919-8CA331FB6391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99201833-F3FD-4320-B919-8CA331FB6391}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 ﻿namespace SULS.Trainer
 {
-    class Senior
+    class Senior : Trainer
     {
         private string courseName;
 
@@ -9,7 +9,7 @@
             get { return this.courseName; }
             set
             {
-                
+                if ()
             }
         }
 

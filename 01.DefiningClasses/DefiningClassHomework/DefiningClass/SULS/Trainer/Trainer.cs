@@ -2,7 +2,7 @@
 
 namespace SULS.Trainer
 {
-    class Trainer
+    class Trainer : SULS.Person
     {
         private string courseName;
 

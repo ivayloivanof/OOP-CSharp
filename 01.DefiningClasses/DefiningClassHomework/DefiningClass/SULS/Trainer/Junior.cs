@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SULS.Trainer
 {
-    class Junior
+    class Junior : Trainer
     {
     }
 }

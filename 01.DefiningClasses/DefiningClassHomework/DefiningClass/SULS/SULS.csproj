@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>ff8b64bc-f83c-469c-b99d-19ed25fd8978</ProjectGuid>
+    <ProjectGuid>{B51D1AC3-73E8-4D17-ABFC-C0E640A2CF7B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SULS</RootNamespace>
@@ -41,11 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student\Current\Current.cs" />
+    <Compile Include="Student\Current\OnlineStudent.cs" />
+    <Compile Include="Student\Current\OnsiteStudent.cs" />
+    <Compile Include="Student\Dropout.cs" />
+    <Compile Include="Student\Graduate.cs" />
+    <Compile Include="Student\Student.cs" />
+    <Compile Include="Trainer\Junior.cs" />
+    <Compile Include="Trainer\Senior.cs" />
+    <Compile Include="Trainer\Trainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

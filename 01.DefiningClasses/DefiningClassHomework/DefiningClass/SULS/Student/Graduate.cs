@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SULS.Student
 {
-    class Graduate
+    class Graduate : Student
     {
     }
 }
