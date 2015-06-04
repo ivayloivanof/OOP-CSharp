@@ -1,2 +1,2 @@
 # OOP-CSharp
-ObjectOrientedProgramming
+Object Oriented Programming in SoftUni 
