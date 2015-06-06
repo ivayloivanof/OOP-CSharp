@@ -1,6 +1,6 @@
 ﻿namespace Geometry.Geometry3D
 {
-    class DistanceCalculator3D
+    class DistanceCalculator3D : Points3D
     {
     }
 }

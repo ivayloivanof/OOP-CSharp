@@ -1,6 +1,6 @@
 ﻿namespace Geometry.Geometry2D
 {
-    class Ellipse
+    class Ellipse : Figure2D
     {
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point3D", "Point3D\Point3D.csproj", "{FD2C3663-9585-4B04-BA02-B2396C9498CB}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paths", "Paths\Paths.csproj", "{7E177BAD-8FBF-44F8-A994-F583E70BCBFF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Namespaces", "Namespaces\Namespaces.csproj", "{9D2EC2E0-2E82-4A6D-9CC9-36F71EEB6C07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLDispatcher", "HTMLDispatcher\HTMLDispatcher.csproj", "{809ECB3C-4A8D-4C70-9053-05C0215544D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9D2EC2E0-2E82-4A6D-9CC9-36F71EEB6C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D2EC2E0-2E82-4A6D-9CC9-36F71EEB6C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D2EC2E0-2E82-4A6D-9CC9-36F71EEB6C07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{809ECB3C-4A8D-4C70-9053-05C0215544D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{809ECB3C-4A8D-4C70-9053-05C0215544D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{809ECB3C-4A8D-4C70-9053-05C0215544D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{809ECB3C-4A8D-4C70-9053-05C0215544D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
