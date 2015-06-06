@@ -3,15 +3,15 @@ namespace Point3D
 {
     public class Point3D
     {
-        private static readonly int[] startingPoints = {0,0,0};
-        public static int[] StartingPoints
+        private static readonly double[] startingPoints = {0,0,0};
+        public static double[] StartingPoints
         {
             get { return startingPoints; }
         }
-
-        private double x;
-        private double y;
-        private double z;
+        
+        private double x = 0;
+        private double y = 0;
+        private double z = 0;
 
         public double X
         {
@@ -60,6 +60,18 @@ namespace Point3D
             this.Z = z;
         }
 
+        public double[] EndPoints()
+        {
+            double[] points =
+            {
+                this.X,
+                this.Y,
+                this.Z
+            };
+
+            return points;
+        }
+        
         public override string ToString()
         {
             return (x).ToString()+y+z;
