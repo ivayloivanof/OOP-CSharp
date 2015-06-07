@@ -6,6 +6,7 @@ namespace HumanStudentAndWorker
     {
         private decimal weekSalary;
         private int workHoursPerDay;
+        private decimal payPerHour;
         private static readonly Random random = new Random();
 
         private decimal WeekSalary
@@ -26,6 +27,12 @@ namespace HumanStudentAndWorker
             }
         }
 
+        public decimal PayPerHour
+        {
+            get { return this.payPerHour; }
+            set { this.payPerHour = value; }
+        }
+
         public Worker(string firstName, string lastName, int workHoursPerDay)
         {
             this.FirstName = firstName;
@@ -36,8 +43,8 @@ namespace HumanStudentAndWorker
 
         private decimal MoneyPerDay(int hours)
         {
-            decimal peyPerHours = RandomPeyPerHours(10, 75);
-            return peyPerHours*hours;
+            this.PayPerHour = RandomPeyPerHours(10, 75);
+            return PayPerHour*hours;
         }
         
         private static decimal RandomPeyPerHours(decimal minValue, decimal maxValue)
