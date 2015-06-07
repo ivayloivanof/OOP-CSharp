@@ -41,7 +41,7 @@ class Person
         get { return this.email; }
         set
         {
-            if (value == null)  //да го направя с regex за символ @
+            if (value == null)
             {
                 this.email = "[unknown email]";
             }
