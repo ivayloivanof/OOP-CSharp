@@ -6,6 +6,7 @@ namespace Animal
     abstract class Animal : ISoundProducible
     {
         private string name;
+        protected string kind;
         protected int age;
         protected char gender;
 
@@ -20,9 +21,10 @@ namespace Animal
             }
         }
 
-        abstract protected int Age { get; set; }
-        abstract protected char Gender { get; set; }
+        abstract public int Age { get; set; }
+        abstract public char Gender { get; set; }
         protected abstract void CreateAnimal(string animal, int age, char gender);
         abstract public void ProduceSound();
+        abstract public string Kind { get; set; }
     }
 }

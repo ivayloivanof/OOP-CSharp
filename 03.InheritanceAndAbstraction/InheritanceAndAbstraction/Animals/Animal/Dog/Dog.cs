@@ -4,7 +4,7 @@ namespace Animal.Dog
 {
     class Dog : Animal
     {
-        protected override int Age
+        public override int Age
         {
             get { return this.age; }
             set
@@ -15,7 +15,7 @@ namespace Animal.Dog
             }
         }
 
-        protected override char Gender
+        public override char Gender
         {
             get { return this.gender; }
             set
@@ -36,11 +36,18 @@ namespace Animal.Dog
             this.Name = animal;
             this.Age = age;
             this.Gender = gender;
+            this.Kind = "dog";
         }
 
         public override void ProduceSound()
         {
             Console.WriteLine("I am a dog and barking!");
+        }
+
+        public override string Kind
+        {
+            get { return this.kind; }
+            set { this.kind = value; }
         }
 
         public Dog(string animal, int age, char gender)

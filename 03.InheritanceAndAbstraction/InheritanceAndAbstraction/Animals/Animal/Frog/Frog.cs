@@ -4,7 +4,7 @@ namespace Animal.Frog
 {
     class Frog : Animal
     {
-        protected override int Age
+        public override int Age
         {
             get { return this.age; }
             set
@@ -15,7 +15,7 @@ namespace Animal.Frog
             }
         }
 
-        protected override char Gender
+        public override char Gender
         {
             get { return this.gender; }
             set
@@ -36,6 +36,7 @@ namespace Animal.Frog
             this.Name = animal;
             this.Age = age;
             this.Gender = gender;
+            this.Kind = "frog";
         }
 
         public Frog(string animal, int age, char gender)
@@ -46,6 +47,12 @@ namespace Animal.Frog
         public override void ProduceSound()
         {
             Console.WriteLine("I am a frog and gobble!");
+        }
+
+        public override string Kind
+        {
+            get { return this.kind; }
+            set { this.kind = value; }
         }
     }
 }
