@@ -54,6 +54,8 @@ namespace HumanStudentAndWorker
                     orderby work.PayPerHour
                     select work;
 
+                //linq order by first name query add here
+
             }
             catch (ArgumentOutOfRangeException)
             {
