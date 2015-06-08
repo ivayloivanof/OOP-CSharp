@@ -14,7 +14,7 @@
 
         public override double GetHumanAge()
         {
-            return this.age * 11;
+            return this.Age * 11;
         }
     }
 }

@@ -8,7 +8,7 @@
         private const int MaxAnimalAge = 15;
 
         private string name;
-        protected readonly int age;
+        private int age;
 
         protected Animal(string name, int age)
         {
@@ -16,29 +16,31 @@
             this.Age = age;
         }
 
-        private string Name
+        public string Name
         {
             get { return this.name; }
-            set
+            private set
             {
-                if (string.IsNullOrEmpty(value.Trim()) || string.IsNullOrWhiteSpace(value.Trim()))
-                    throw new ArgumentNullException("Name can not be null, empty or only whitespace!");
+                if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentNullException("Name cannot be null, empty or only whitespaces!");
                 this.name = value.Trim();
             }
         }
 
-        private int Age
+        protected int Age
         {
             get { return this.age; }
 
-            set
+            private set
             {
-                if (value < 0)
+                if (value < MinAnimalAge || value > MaxAnimalAge)
                 {
                     throw new ArgumentOutOfRangeException("value", "Age cannot be negative.");
                 }
+                this.age = value;
             }
         }
+
         public double ProductPerDay
         {
             get
@@ -51,7 +53,7 @@
 
         public abstract double GetHumanAge();
 
-        public double CalculateProductPerDay()
+        private double CalculateProductPerDay()
         {
             switch (this.age)
             {
