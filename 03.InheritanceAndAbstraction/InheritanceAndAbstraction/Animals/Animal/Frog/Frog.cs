@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Animal.Frog
+namespace Interfaces.Animal.Frog
 {
     class Frog : Animal
     {

@@ -1,4 +1,4 @@
-﻿namespace Animal.Cat
+﻿namespace Interfaces.Animal.Cat
 {
     class Kitten : Cat
     {

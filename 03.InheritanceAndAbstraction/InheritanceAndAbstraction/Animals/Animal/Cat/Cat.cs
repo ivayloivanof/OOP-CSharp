@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Animal.Cat
+namespace Interfaces.Animal.Cat
 {
     class Cat : Animal
     {

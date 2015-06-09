@@ -1,7 +1,7 @@
 ﻿using System;
-using Interfaces;
+using Interfaces.Interfaces;
 
-namespace Animal
+namespace Interfaces.Animal
 {
     abstract class Animal : ISoundProducible
     {

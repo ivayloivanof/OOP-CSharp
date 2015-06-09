@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using Animal.Cat;
-using Animal.Dog;
-using Animal.Frog;
+using Interfaces.Animal.Cat;
+using Interfaces.Animal.Dog;
+using Interfaces.Animal.Frog;
 
 namespace Interfaces
 {
