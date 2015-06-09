@@ -1,17 +1,27 @@
 ﻿namespace BookStore.UI
 {
+    using Interfaces;
     using System;
 
-    public class ConsoleUserInterface
+    public class ConsoleUI : IReadeble, IRenderer
     {
-        string ReadLine()
+
+        public string ReadLine()
         {
             return Console.ReadLine();
         }
 
-        void WriteLine(string message, params string[] parameters)
+        public void WriteLine(string str, decimal? num = null)
         {
-            Console.WriteLine(message, parameters);
+            //("Total revenue: {0:F2}", this.revenue)
+            if (str.Contains("Total"))
+            {
+                Console.WriteLine("Total revenue: {0:F2}", num);
+            }
+            else
+            {
+                Console.WriteLine(str);
+            }
         }
     }
 }

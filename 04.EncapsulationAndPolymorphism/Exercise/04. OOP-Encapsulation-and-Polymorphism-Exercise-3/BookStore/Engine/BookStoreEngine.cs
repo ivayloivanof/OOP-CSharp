@@ -1,9 +1,11 @@
-﻿namespace BookStore.Engine
+﻿using BookStore.UI;
+
+namespace BookStore.Engine
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using Books;
+    using Interfaces;
 
     public class BookStoreEngine
     {
@@ -23,7 +25,8 @@
         {
             while (this.IsRunning)
             {
-                string command = Console.ReadLine();
+                IReadeble reader = new ConsoleUI();
+                string command = reader.ReadLine();
 
                 if (string.IsNullOrWhiteSpace(command))
                 {
@@ -34,10 +37,11 @@
 
                 string commandResult = this.ExecuteCommand(commandArgs);
 
-                Console.WriteLine(commandResult);
+                IRenderer writer = new ConsoleUI();
+                writer.WriteLine(commandResult);
             }
-
-            Console.WriteLine("Total revenue: {0:F2}", this.revenue);
+            IRenderer writerTotal = new ConsoleUI();
+            writerTotal.WriteLine("Total revenue: {0:F2}", this.revenue);
         }
 
         private string ExecuteCommand(string[] commandArgs)
