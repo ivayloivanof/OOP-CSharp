@@ -37,5 +37,25 @@ namespace CompanyHierarchy.Class.Employee
                 }
             }
         }
+
+        public Employee(string firstName, string lastName, decimal salary, int id = 1, string department = "Production")
+            : base(firstName, lastName, id)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Id = id;
+            this.Salary = salary;
+            this.Department = department;
+        }
+
+        public override string ToString()
+        {
+            Console.WriteLine("First name: {0}", this.FirstName);
+            Console.WriteLine("Last Name: {0}", this.LastName);
+            Console.WriteLine("Id: {0}", this.Id);
+            Console.WriteLine("Salary: {0}", this.Salary);
+            Console.WriteLine("Department: {0}", this.Department);
+            return string.Empty;
+        }
     }
 }

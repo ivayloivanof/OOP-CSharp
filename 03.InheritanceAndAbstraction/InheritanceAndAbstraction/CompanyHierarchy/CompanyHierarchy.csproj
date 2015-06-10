@@ -41,10 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Customer\Costomer.cs" />
     <Compile Include="Class\Employee\Employee.cs" />
     <Compile Include="Class\Employee\Manager.cs" />
     <Compile Include="Class\Employee\RegularEmployer\Developer.cs" />
-    <Compile Include="Class\Employee\RegularEmployer\RegularEmployee.cs" />
     <Compile Include="Class\Employee\RegularEmployer\SalesEmployee.cs" />
     <Compile Include="Class\Person.cs" />
     <Compile Include="Interfaces\IDeveloper.cs" />
@@ -57,9 +57,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\Customer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
