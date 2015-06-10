@@ -1,0 +1,1 @@
+Point 3D coordinates - {4},{5},{7};
