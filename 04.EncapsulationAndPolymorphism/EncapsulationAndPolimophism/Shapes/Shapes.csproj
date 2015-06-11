@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\BasicShape.cs" />
+    <Compile Include="Class\Circle.cs" />
+    <Compile Include="Class\Rectangle.cs" />
+    <Compile Include="Class\Triangle.cs" />
+    <Compile Include="Interfaces\IShape.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
