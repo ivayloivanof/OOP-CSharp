@@ -8,16 +8,17 @@ namespace Shapes
     {
         static void Main()
         {
-            IShape circle = new Circle(4);
-            Console.WriteLine("circle area: " + circle.CalculateArea());
-            Console.WriteLine("circle perimeter: " + circle.CalculatePerimeter());
-            IShape triangle = new Triangle(5, 8.4, 6.4, 8.5);
-            Console.WriteLine("triangle area: " + triangle.CalculateArea());
-            Console.WriteLine("triangle perimeter: " + triangle.CalculatePerimeter());
-            IShape rectangle = new Rectangle(8, 5);
-            Console.WriteLine("rectangle area: " + rectangle.CalculateArea());
-            Console.WriteLine("rectangle perimeter: " + rectangle.CalculatePerimeter());
-            Console.WriteLine();
+            IShape[] shapes = new IShape[3];
+            //We produce figures of he basics of matryoshka dolls
+            shapes[0] = new Circle(4);
+            shapes[1] = new Triangle(5, 8.4, 6.4, 8.5);
+            shapes[2] = new Rectangle(8, 5);
+
+            foreach (IShape shape in shapes)
+            {
+                Console.WriteLine("area is: {0}", shape.CalculateArea());
+                Console.WriteLine("perimeter is: {0}", shape.CalculatePerimeter());
+            }
         }
     }
 }
