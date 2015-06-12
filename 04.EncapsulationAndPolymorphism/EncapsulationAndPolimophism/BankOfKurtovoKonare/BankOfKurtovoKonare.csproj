@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Accounts.cs" />
+    <Compile Include="Class\Deposit.cs" />
+    <Compile Include="Class\Loan.cs" />
+    <Compile Include="Class\Mortgage.cs" />
     <Compile Include="Interfaces\ICompany.cs" />
     <Compile Include="Interfaces\IIndividual.cs" />
     <Compile Include="Program.cs" />
