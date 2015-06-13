@@ -1,4 +1,6 @@
-﻿namespace Shapes.Class
+﻿using System;
+
+namespace Shapes.Class
 {
     using Interfaces;
 
@@ -10,12 +12,22 @@
         public double Width
         {
             get { return this.width; }
-            set { this.width = value; }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentOutOfRangeException("width", "Width cannot be negative length!");
+                this.width = value;
+            }
         }
         public double Height
         {
             get { return this.height; }
-            set { this.height = value; }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentOutOfRangeException("height", "Height cannot be negative length!");
+                this.height = value;
+            }
         }
 
         public abstract double CalculateArea();

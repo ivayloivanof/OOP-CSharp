@@ -15,7 +15,12 @@ namespace Shapes.Class
         public double R
         {
             get { return this.r; }
-            set { this.r = value; }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentOutOfRangeException("radius", "Radius cannot be negative length!");
+                this.r = value;
+            }
         }
 
         public double CalculateArea()
