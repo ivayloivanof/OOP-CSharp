@@ -7,8 +7,8 @@
 
     public class Engine
     {
-        protected List<Character> characterList = new List<Character>();
-        protected List<Bonus> timeoutItems;
+        private List<Character> characterList = new List<Character>();
+        private List<Bonus> timeoutItems;
 
         private const int GameTurns = 4;
 
@@ -161,6 +161,8 @@
             this.PrintCharactersStatus(aliveCharacters);
         }
 
+
+        //reading commands
         private void ReadUserInput()
         {
             string inputLine = Console.ReadLine();
