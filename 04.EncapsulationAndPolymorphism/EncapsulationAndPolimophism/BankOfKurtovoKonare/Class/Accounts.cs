@@ -2,30 +2,53 @@
 
 namespace BankOfKurtovoKonare.Class
 {
-    abstract class Accounts
+    using Interfaces;
+    abstract class Accounts : IAccount
     {
-        private string customer;
-        protected decimal balance;
-        protected int interestRate;
+        private decimal balance;
+        private decimal interestRate;
 
-        public Accounts(string customer)
+        public Accounts(Customer customer, decimal balance, decimal interestRate)
         {
             this.Customer = customer;
+            this.Balance = balance;
+            this.InterestRate = interestRate;
         }
 
-        public string Customer
+        public Customer Customer { get; set; }
+
+        public decimal Balance
         {
-            get { return this.customer; }
+            get { return this.balance; }
             set
             {
-                if (string.IsNullOrEmpty(value))
-                    throw new ArgumentException("This customer not valid!");
-                this.customer = value.Trim();
+                if (value < 0 )
+                    throw new ArgumentOutOfRangeException("balance", "The balance cannot be negative!");
+                this.balance = value;
             }
         }
-        public abstract decimal Balance { get; set; }
-        public abstract int  InterestRate { get; set; }
 
+        public decimal InterestRate
+        {
+            get { return interestRate; }
+            set
+            {
+                if (value < 0 )
+                    throw new ArgumentOutOfRangeException("interest rate", "InterestRate cannot be negative number!");    
+                this.interestRate = value;
+            }
+        }
 
+        public void DepositMoney(decimal money)
+        {
+            this.balance += money;
+        }
+
+        public abstract decimal CalculateInterest(int months);
+
+        public override string ToString()
+        {
+            return string.Format("Account: {0}\nBalance = {1}\nInterest rate = {2}\n", this.GetType().Name, this.Balance, this.InterestRate);
+        }
     }
 }

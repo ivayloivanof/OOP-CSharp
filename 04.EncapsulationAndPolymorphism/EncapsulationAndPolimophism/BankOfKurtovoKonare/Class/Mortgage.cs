@@ -4,31 +4,17 @@ namespace BankOfKurtovoKonare.Class
 {
     class Mortgage : Accounts
     {
-        public Mortgage(string customer, decimal balance) : base (customer)
+        public Mortgage(Customer customer, decimal balance, decimal interestRate) : base(customer, balance, interestRate)
         {
-            this.Balance = balance;
-            if (customer.Contains("company"))
-            {
-                this InterestRate = 
-            }
-            this.InterestRate 
         }
 
-        public override decimal Balance
+        public override decimal CalculateInterest(int months)
         {
-            get { return this.balance; }
-            set
-            {
-                if (value > 0)
-                    throw new ArgumentOutOfRangeException("Cannot be created Mortgage Account with balance > 0. Balance must be negative!");
-                this.balance = value;
-            }
-        }
-
-        public override int InterestRate
-        {
-            get { return this.interestRate; }
-            set { this.interestRate = value; }
+            if (months < 6 && this.Customer == Customer.individual)
+                return 0;
+            else if (months < 12 && this.Customer == Customer.company)
+                return this.InterestRate = (this.Balance*(1 + this.InterestRate*months)) / 2;
+            return this.InterestRate = this.Balance*(1 + this.InterestRate*months);
         }
     }
 }

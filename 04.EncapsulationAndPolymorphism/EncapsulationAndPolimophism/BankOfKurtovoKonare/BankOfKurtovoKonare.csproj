@@ -42,11 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Accounts.cs" />
+    <Compile Include="Class\Customer.cs" />
     <Compile Include="Class\Deposit.cs" />
     <Compile Include="Class\Loan.cs" />
     <Compile Include="Class\Mortgage.cs" />
-    <Compile Include="Interfaces\ICompany.cs" />
-    <Compile Include="Interfaces\IIndividual.cs" />
+    <Compile Include="Interfaces\IAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
