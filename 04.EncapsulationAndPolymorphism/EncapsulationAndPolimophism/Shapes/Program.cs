@@ -1,15 +1,16 @@
-﻿using System;
-using Shapes.Class;
-
-namespace Shapes
+﻿namespace Shapes
 {
+    using System;
     using Interfaces;
-    class Program
+    using Shapes.Class;
+
+    public class Program
     {
-        static void Main()
+        public static void Main()
         {
             IShape[] shapes = new IShape[3];
-            //We produce figures of he basics of matryoshka dolls
+
+            // We produce figures of he basics of matryoshka dolls
             shapes[0] = new Circle(4);
             shapes[1] = new Triangle(5, 8.4, 6.4, 8.5);
             shapes[2] = new Rectangle(8, 5);
