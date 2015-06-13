@@ -7,7 +7,7 @@
 
     public class Engine
     {
-        private List<Character> characterList = new List<Character>();
+        public List<Character> characterList = new List<Character>();
         private List<Bonus> timeoutItems;
 
         private const int GameTurns = 4;
