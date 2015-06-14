@@ -35,9 +35,19 @@ namespace FractionCalculator.Class
             }
         }
 
-        public override string ToString()
+        public static Fraction operator +(Fraction fraction1, Fraction fraction2)
         {
-            return string.Format();
+            return new Fraction(fraction1.Numerator + fraction2.Numerator, fraction1.Denominator + fraction2.Denominator);
         }
+
+        public static Fraction operator -(Fraction fraction1, Fraction fraction2)
+        {
+            return new Fraction(fraction1.Numerator - fraction2.Numerator, fraction1.Denominator - fraction2.Denominator);
+        }
+
+        //public override string ToString()
+        //{
+        //    return string.Format();
+        //}
     }
 }
