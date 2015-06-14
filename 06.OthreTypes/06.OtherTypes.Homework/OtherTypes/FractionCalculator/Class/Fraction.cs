@@ -4,16 +4,18 @@ namespace FractionCalculator.Class
 {
     public struct Fraction
     {
-        private long numerator;
-        private long denominator;
-
-        public Fraction(long numerator, long denominator) : this()
+        private double numerator;
+        private double denominator;
+        private double fraction;
+        
+        public Fraction(double numerator, double denominator) : this()
         {
             this.Numerator = numerator;
             this.Denominator = denominator;
+            this.Fractions =  1.0 * this.Numerator/this.Denominator;
         }
 
-        public long Denominator
+        public double Denominator
         {
             get { return this.denominator; }
             set
@@ -23,8 +25,7 @@ namespace FractionCalculator.Class
                 this.denominator = value;
             }
         }
-
-        public long Numerator
+        public double Numerator
         {
             get { return this.numerator; }
             set
@@ -34,10 +35,18 @@ namespace FractionCalculator.Class
                 this.numerator = value;
             }
         }
+        public double Fractions
+        {
+            get { return this.fraction; }
+            set { this.fraction = value; }
+        }
 
         public static Fraction operator +(Fraction fraction1, Fraction fraction2)
         {
-            return new Fraction(fraction1.Numerator + fraction2.Numerator, fraction1.Denominator + fraction2.Denominator);
+            double denominator = fraction1.Denominator * fraction2.Denominator;
+            double numerator =  ((1.0 * fraction1.Numerator / fraction1.Denominator) + 
+                                (1.0 * fraction2.Numerator / fraction2.Denominator)) * denominator;
+            return new Fraction(numerator, denominator);
         }
 
         public static Fraction operator -(Fraction fraction1, Fraction fraction2)
@@ -45,9 +54,9 @@ namespace FractionCalculator.Class
             return new Fraction(fraction1.Numerator - fraction2.Numerator, fraction1.Denominator - fraction2.Denominator);
         }
 
-        //public override string ToString()
-        //{
-        //    return string.Format();
-        //}
+        public override string ToString()
+        {
+            return this.Fractions.ToString();
+        }
     }
 }
