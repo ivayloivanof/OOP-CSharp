@@ -23,7 +23,7 @@ namespace GenericList
                 numbers.Remove(2);
                 int num = numbers.Finding(325325);
                 int max = numbers.Max();
-                //int min = numbers.Min();
+                int min = numbers.Min();
 
                 Console.WriteLine(numbers);
                 numbers.Clear();

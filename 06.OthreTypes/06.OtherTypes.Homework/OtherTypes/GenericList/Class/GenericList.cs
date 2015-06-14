@@ -3,8 +3,7 @@ using System.Linq;
 
 namespace GenericList.Class
 {
-    class GenericList<T> 
-        where T : IComparable<T>, IEquatable<T>
+    class GenericList<T> : IComparable<T>
     {
         private const int defaultmemory = 5;
         private T[] elements;
@@ -108,10 +107,25 @@ namespace GenericList.Class
             return max;
         }
 
-        //public int T Min()
-        //{
-            
-        //}
+        public T Min()
+        {
+            T tmp = elements[0];
+            for (int i = 0; i < elements.Length-1; i++)
+            {
+                
+            }
+            return tmp;
+        }
+
+        public int CompareTo(T other)
+        {
+            if (other == null) return 1;
+            for (int i = 0; i < elements.Length; i++)
+            {
+                
+            }
+            return 0;
+        }
 
         public override string ToString()
         {
