@@ -21,7 +21,9 @@ namespace GalacticGPS.Class
             set
             {
                 if (value < -180.0 && value > 180.0)
+                {
                     throw new ArgumentOutOfRangeException("longitude", "This value for Longitude not is correct (from -180 to 180)");
+                }
                 this.longitude = value;
             }
         }
@@ -31,14 +33,22 @@ namespace GalacticGPS.Class
             set
             {
                 if (value < -90 && value > 90)
+                {
                     throw new ArgumentOutOfRangeException("latitude", "This value for Latitude not is correct (from -90 to 90)");
+                }
                 this.latitude = value;
             }
         }
         public Enum Planet
         {
-            get { return this.planet; }
-            set { this.planet = (Planet) Enum.Parse(typeof (Planet), value.ToString()); }
+            get
+            {
+                return this.planet;
+            }
+            set
+            {
+                this.planet = (Planet)Enum.Parse(typeof(Planet), value.ToString());
+            }
         }
 
         public override string ToString()

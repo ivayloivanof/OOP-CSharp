@@ -1,14 +1,21 @@
-﻿using System;
-
-namespace GalacticGPS
+﻿namespace GalacticGPS
 {
+    using System;
     using Class;
-    class TestProgram
+
+    public class TestProgram
     {
-        static void Main()
+        public static void Main()
         {
-            Location home = new Location(18.037986, 28.870097, Planet.Earth);
-            Console.WriteLine(home);
+            try
+            {
+                Location home = new Location(18.037986, 28.870097, Planet.Earth);
+                Console.WriteLine(home);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
