@@ -21,6 +21,10 @@ namespace FractionCalculator
             {
                 Console.WriteLine(ex.Message);
             }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
