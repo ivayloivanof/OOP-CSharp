@@ -55,7 +55,6 @@
     <Compile Include="Items\Axe.cs" />
     <Compile Include="Items\Bonus.cs" />
     <Compile Include="Items\Injection.cs" />
-    <Compile Include="Items\Item.cs" />
     <Compile Include="Items\Pill.cs" />
     <Compile Include="Items\Shield.cs" />
     <Compile Include="Program.cs" />

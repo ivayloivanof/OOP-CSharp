@@ -2,7 +2,7 @@
 {
     class Axe : Item
     {
-        public Axe(string id, int healthEffect, int deffenceEffect, int attackEfffect) 
+        public Axe(string id, int healthEffect = 0, int deffenceEffect = 0, int attackEfffect = 75) 
             : base(id, healthEffect, deffenceEffect, attackEfffect)
         {
         }
