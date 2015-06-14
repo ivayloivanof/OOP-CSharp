@@ -18,10 +18,14 @@ namespace GenericList
                 numbers.Add(235325);
                 Console.WriteLine(numbers.Count());
                 numbers.Add(32535);
-                numbers.Add(325325);
+                numbers.Add(325565);
 
                 numbers.Remove(2);
+                int num = numbers.Finding(325325);
+                int max = numbers.Max();
+                //int min = numbers.Min();
 
+                Console.WriteLine(numbers);
                 numbers.Clear();
             }
             catch (Exception)
