@@ -3,7 +3,8 @@
     using Interfaces;
     class Bonus : Item, ITimeoutable
     {
-        protected Bonus(string id, int healthEffect, int deffenceEffect, int attackEfffect) : base(id, healthEffect, deffenceEffect, attackEfffect)
+        public Bonus(string id, int healthEffect, int deffenceEffect, int attackEfffect) 
+            : base(id, healthEffect, deffenceEffect, attackEfffect)
         {
         }
 

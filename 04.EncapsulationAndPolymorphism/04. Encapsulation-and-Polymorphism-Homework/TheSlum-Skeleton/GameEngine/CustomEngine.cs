@@ -1,9 +1,9 @@
 ﻿using System;
-using TheSlum.Characters;
-using TheSlum.Items;
 
 namespace TheSlum.GameEngine
 {
+    using TheSlum.Characters;
+    using TheSlum.Items;
     public class CustomEngine : Engine
     {
         protected override void ExecuteCommand(string[] inputParams)
@@ -75,27 +75,27 @@ namespace TheSlum.GameEngine
         {
             Character characterToAcceptIitem = GetCharacterById(inputParams[1]);
             Item itemToAdd;
-            switch (inputParams[2].ToLower())
-            {
-                case "axe":
-                    itemToAdd = new Axe(inputParams[3]);
-                    characterToAcceptIitem.AddToInventory(itemToAdd);
-                    break;
-                case "shield":
-                    itemToAdd = new Shield(inputParams[3]);
-                    characterToAcceptIitem.AddToInventory(itemToAdd);
-                    break;
-                case "pill":
-                    itemToAdd = new Pill(inputParams[3]);
-                    characterToAcceptIitem.AddToInventory(itemToAdd);
-                    break;
-                case "injection":
-                    itemToAdd = new Injection(inputParams[3]);
-                    characterToAcceptIitem.AddToInventory(itemToAdd);
-                    break;
-                default:
-                    break;
-            }
+            //switch (inputParams[2].ToLower())
+            //{
+            //    case "axe":
+            //        itemToAdd = new Axe(inputParams[3]);
+            //        characterToAcceptIitem.AddToInventory(itemToAdd);
+            //        break;
+            //    case "shield":
+            //        itemToAdd = new Shield(inputParams[3]);
+            //        characterToAcceptIitem.AddToInventory(itemToAdd);
+            //        break;
+            //    case "pill":
+            //        itemToAdd = new Pill(inputParams[3]);
+            //        characterToAcceptIitem.AddToInventory(itemToAdd);
+            //        break;
+            //    case "injection":
+            //        itemToAdd = new Injection(inputParams[3]);
+            //        characterToAcceptIitem.AddToInventory(itemToAdd);
+            //        break;
+            //    default:
+            //        break;
+            //}
         }
     }
 }

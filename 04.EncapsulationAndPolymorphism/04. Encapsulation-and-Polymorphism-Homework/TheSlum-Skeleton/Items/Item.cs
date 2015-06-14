@@ -2,7 +2,7 @@
 {
     class Item : GameObject
     {
-        protected Item(string id, int healthEffect, int deffenceEffect, int attackEfffect) : base (id)
+        public Item(string id, int healthEffect, int deffenceEffect, int attackEfffect) : base (id)
         {
             this.AttackEffect = attackEfffect;
             this.DefenceEffect = deffenceEffect;
