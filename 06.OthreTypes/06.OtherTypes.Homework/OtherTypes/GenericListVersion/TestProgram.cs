@@ -9,7 +9,7 @@ namespace GenericList
         {
             try
             {
-                GenericList<int> numbers = new GenericList<int>();
+                GenericsList<int> numbers = new GenericsList<int>();
                 numbers.Add(6);
                 numbers.Add(23);
                 Console.WriteLine(numbers.Count());
@@ -24,6 +24,13 @@ namespace GenericList
                 int num = numbers.Finding(325325);
                 int max = numbers.Max();
                 int min = numbers.Min();
+
+                System.Reflection.MemberInfo info = typeof (GenericsList<int>);
+                var attributes = info.GetCustomAttributesData();
+                for (int i = 0; i < attributes.Count; i++)
+                {
+                    Console.WriteLine(attributes[i].ConstructorArguments[i].Value);
+                }
 
                 Console.WriteLine(numbers);
                 numbers.Clear();

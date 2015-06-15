@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Linq;
+using GenericListVersion.Class;
 
 namespace GenericList.Class
 {
-    class GenericList<T> : IComparable<T>
+    [MyVersion("version = 1.2")]
+    public class GenericsList<T> : IComparable<T>
     {
         private const int defaultmemory = 5;
         private T[] elements;
@@ -11,12 +13,12 @@ namespace GenericList.Class
         private int elementIndex;
 
         [Obsolete("Version: 2.11")]
-        public GenericList(int memory = defaultmemory)
+        public GenericsList(int memory = defaultmemory)
         {
             this.elements = new T[defaultmemory];
             this.Buffer = memory;
         }
-
+        
         public int Buffer
         {
             get { return this.buffer; }
@@ -30,6 +32,7 @@ namespace GenericList.Class
             }
         }
 
+        [MyVersion("version=2.1")]
         public void Add(T element)
         {
             if (this.elementIndex >= elements.Length)
@@ -46,6 +49,7 @@ namespace GenericList.Class
             this.elementIndex++;
         }
 
+        [MyVersion("version=3.1")]
         public void Remove(int index)
         {
             if (index < 0)
